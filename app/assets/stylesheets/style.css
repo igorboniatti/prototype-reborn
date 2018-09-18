@@ -1,0 +1,74 @@
+.row
+{
+
+  max-width:1280px;
+  margin:0 auto;
+}
+
+body
+{
+
+  font-family:tahoma;
+}
+
+.hero
+{
+
+  position:absolute;
+  width:1140px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+header
+{
+
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(woman-smiling-1.png);
+  height:100vh;
+  background-position:center;
+  background-size:cover;
+}
+
+h1
+{
+
+  color:white;
+}
+
+.main-nav
+{
+
+  list-style: none;
+  float:right;
+  margin-top: 60px;
+}
+
+.main-nav li
+{
+  display: inline-block;
+  margin-left:20px;
+
+}
+
+.main-nav li a
+{
+
+  color:white;
+  text-decoration: none;
+  font-size:90%;
+  font-weight: bold;
+}
+
+.main-nav li a:hover
+{
+
+  color: #E91D3A;
+}
+
+.logo img
+{
+  height: 100px;
+  float: left;
+  margin-top: 30px;
+}
