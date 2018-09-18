@@ -1,0 +1,56 @@
+DOCUMENTAÇÃO TOTAL
+----------------------
+INSTALL RUBY DEV KIT (2.5.1-2, mais atualizada)
+https://rubyinstaller.org/downloads/
+----------------------
+INSTALL RUBY GEMS
+https://rubygems.org/pages/download?locale=pt-BR
+----------------------
+INSTALL GEMS (prompt ruby)
+gem install rails
+gem install pg
+gem install bundle
+gem install rack-cors
+gem install rails_admin
+gem install devise (https://github.com/plataformatec/devise)
+
+bundle install
+----------------------
+INSTALL PGADMIN4
+https://www.pgadmin.org/download/
+
+name
+prototype-reborn
+
+host
+127.0.0.1
+
+db
+postgres
+prototype-reborn
+prototype-reborn-development
+prototype-reborn-test
+prototype-reborn-production
+
+user
+postgres
+projetomariadapenha
+
+password
+M@r14d@P3nh4_!
+
+MUDAR AS CONFIGS DO SCAFFOLD RAILS (database.yml <- config)
+----------------------
+INSTALL POSTGRESQL
+https://www.postgresql.org/download/windows/
+----------------------
+INSTALL NPM WITH NODE.JS
+https://www.npmjs.com/get-npm
+----------------------
+INSTALL ANGULAR
+https://www.codewithjason.com/getting-started-with-angular-and-rails/#get-an-angular-app-initialized-and-running
+
+
+----------------------
+RAILS_ADMIN SITE ADMINISTRATION
+https://onebitcode.com/rails-admin-tutorial-1/
