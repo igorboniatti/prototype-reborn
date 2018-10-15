@@ -1,0 +1,120 @@
+*
+{
+
+	margin: 0;
+	padding: 0;
+}
+
+.row
+{
+  max-width:1440px;
+  margin:0 auto;
+}
+
+body
+{
+
+  font-family:tahoma;
+}
+
+.hero
+{
+
+  position:absolute;
+  width:1280px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+header
+{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(woman-smiling-1.png);
+  height:100vh;
+  background-position:center;
+  background-size:cover;
+}
+
+h1
+{
+
+  color:white;
+}
+
+.main-nav
+{
+  position:absolute;  
+  margin-left: 20%;
+  list-style: none;
+  margin-top: 60px;
+}
+
+.main-nav li
+{
+	color:#F47B35;
+ 	display: inline-block;
+  margin-left:20px;
+
+}
+
+.main-nav li a
+{
+
+  	color:white;
+  	text-decoration: none;
+  	font-size:90%;
+  	font-weight: bold;
+}
+
+.main-nav li a:hover
+{
+
+  	color: #F47B35;
+  	border-bottom: 2px solid #E91D3A;
+  	transition: all 0.1s ease-in;
+  	padding: 10px 0;
+}
+
+.logo img
+{
+  position:absolute;
+	height: 100px;
+  margin-left: 1%;
+	margin-top: 40px;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  overflow: hidden;
+}
+
+
+
+
+
+.page-loader-variant {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 9999999;
+  background: #191919;
+  transition: .3s all ease;
+}
+
+
+
+.img-logo-fluid img {
+  margin-top: -5px;
+  margin-left: 0.8%;
+  height: 65px;
+}
