@@ -61753,5 +61753,18 @@ body.rtl .tp-kbimg {
   }
 }
 
-
 /*# sourceMappingURL=style.css.map */
+
+header
+{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(woman-smiling-1.png);
+  height:100vh;
+  background-position:center;
+  background-size:cover;
+}
+
+img
+{
+  width: 70px;
+  margin-left: 1%;
+}

@@ -1,0 +1,27 @@
+<%= form_with(model: arquivo, local: true, html: { multipart: true }) do |form| %>
+  <% if arquivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(arquivo.errors.count, "error") %> prohibited this arquivo from being saved:</h2>
+
+      <ul>
+      <% arquivo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arq %>
+    <%= form.file_field :arq %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Arquivos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Arq</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arquivos.each do |arquivo| %>
+      <tr>
+        <td><%= arquivo.titulo %></td>
+        <td><%= image_tag arquivo.arq.url %></td>
+        <td><%= link_to arquivo.arq.url, arquivo.titulo, target: :_blank %></td>
+        <td><%= link_to 'Show', arquivo %></td>
+        <td><%= link_to 'Edit', edit_arquivo_path(arquivo) %></td>
+        <td><%= link_to 'Destroy', arquivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Arquivo', new_arquivo_path %>

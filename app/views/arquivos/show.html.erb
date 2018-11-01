@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @arquivo.titulo %>
+</p>
+
+<p>
+  <strong>Arq:</strong>
+  <%= @arquivo.arq %>
+</p>
+
+<%= link_to 'Edit', edit_arquivo_path(@arquivo) %> |
+<%= link_to 'Back', arquivos_path %>
