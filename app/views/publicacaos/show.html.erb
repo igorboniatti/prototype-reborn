@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @publicacao.titulo %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @publicacao.data %>
+</p>
+
+<p>
+  <strong>Conteudo:</strong>
+  <%= @publicacao.conteudo %>
+</p>
+
+<%= link_to 'Edit', edit_publicacao_path(@publicacao) %> |
+<%= link_to 'Back', publicacaos_path %>

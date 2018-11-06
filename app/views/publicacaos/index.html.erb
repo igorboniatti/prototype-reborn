@@ -27,8 +27,8 @@
               <div class="rd-navbar-brand">
                 <a href="">
                   <div class="img-logo-fluid">
-			      	<%= link_to(image_tag ("logo_fundo_preto.png")) %>
-			      </div>
+              <%= link_to(image_tag ("logo_fundo_preto.png")) %>
+            </div>
                 </a>
               </div>
             </div>
@@ -38,12 +38,12 @@
                   <div class="rd-navbar-mobile-brand">
                     <a href="">
                       <div class="logo">
-				      	<%= link_to(image_tag ("logo_fundo_preto.png")) %>
-				      </div>
+                <%= link_to(image_tag ("logo_fundo_preto.png")) %>
+              </div>
                     </a>
                   </div>
                   <ul class="rd-navbar-nav">
-                  	<li class="active">
+                    <li>
                       <a href="home">
                         <span>Página Inicial</span>
                       </a>
@@ -53,7 +53,7 @@
                         <span>A Lei Maria da Penha</span>
                       </a>
                     </li>
-                    <li>
+                    <li class="active">
                       <a href="publicacaos">
                         <span>Publicações</span>
                       </a>
@@ -120,31 +120,16 @@
           </div>
         </nav>
       </div>
-      <div class="swiper-container swiper-slider" data-loop="true" data-autoplay="true" data-height="100vh" data-dragable="false" data-min-height="480px">
-        <div class="swiper-wrapper text-center">
-          <div class="swiper-slide" id="" data-slide-bg="" data-preview-bg="">
-            <div class="swiper-caption swiper-parallax">
+      <div class="swiper-container swiper-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-caption" style="margin-top: 100px">
               <div class="swiper-slide-caption">
-                <div class="container">
-                  <div class="row justify-content-xl-center">
-                    <div class="col-xl-12">
-                      <h1>
-                        <span class="big text-uppercase" data-caption-animate="fadeIn" data-caption-delay="700">Projeto Maria da Penha Chapecó</span>
-                      </h1>
-                    </div>
-                    <div class="col-xl-10 offset-top-30">
-                      <h4 class="d-none d-md-block text-light" data-caption-animate="fadeIn" data-caption-delay="900"> Protótipo de website para auxiliar vítimas de violência doméstica e familiar no município de Chapecó (SC). </h4>
-                      <div class="group group-xl offset-top-20 offset-sm-top-50">
-                        <a class="btn btn-primary btn-lg btn-anis-effect" href="sobre" data-caption-animate="fadeIn" data-caption-delay="1200" style="color: #ffffff; background-color: #C4442D; border-color: #EE3252;">
-                          <span class="btn-text">Saiba mais</span>
-                        </a>
-                        <a class="btn btn-default btn-lg btn-anis-effect" href="publicacaos" data-caption-animate="fadeIn" data-caption-delay="1200">
-                          <span class="btn-text">Publicações</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <% @publicacaos.each do |publicacao| %>
+                      <h2><td><%= publicacao.titulo %></td></h2>
+                      <h6><td><%= publicacao.data %></td></h6>
+                      <h4><%= publicacao.conteudo %></h4>
+                <% end %>
               </div>
             </div>
           </div>
