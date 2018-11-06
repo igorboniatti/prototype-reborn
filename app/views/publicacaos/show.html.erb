@@ -1,19 +1,114 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @publicacao.titulo %>
-</p>
+	<head>
 
-<p>
-  <strong>Data:</strong>
-  <%= @publicacao.data %>
-</p>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-<p>
-  <strong>Conteudo:</strong>
-  <%= @publicacao.conteudo %>
-</p>
+		<title>@publicacao.titulo</title>
 
-<%= link_to 'Edit', edit_publicacao_path(@publicacao) %> |
-<%= link_to 'Back', publicacaos_path %>
+		<!-- Bootstrap core CSS -->
+		<%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
+
+		<!-- Custom styles for this template -->
+		<%= stylesheet_link_tag 'publicacaos/publicacaos', media: 'all', 'data-turbolinks-track' => true %>
+
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+			<div class="container">
+				<a class="navbar-brand" href="home"><%= link_to(image_tag ("logo_fundo_preto.png")) %></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="a_lei_maria_da_penha">A Lei Maria da Penha</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="publicacaos">Publicações</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="instituicaos">Redes de Atendimento</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="baixavels">Links Úteis</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="sobre">Sobre o Projeto</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+
+					<h1 class="mt-4"><%= @publicacao.titulo %></h1>
+					<hr>
+					<h8>Autor: Projeto Maria da Penha | Data de publicação: <%= @publicacao.data %></h8>
+					<hr>
+					<!-- <img class="img-fluid rounded" src="http://placehold.it/900x300" alt=""> -->
+
+					
+					
+					<!-- CONTEÚDO DA PUBLICAÇÃO -->
+					<p class="lead">
+						<%= @publicacao.conteudo %>					
+					</p>
+
+					<!-- COMENTAR -->
+					<div class="card my-4">
+						<h5 class="card-header">Deixe um comentário:</h5>
+						<div class="card-body">
+							<form>
+								<div class="form-group">
+									<textarea class="form-control" rows="3"></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary">Comentar</button>
+							</form>
+						</div>
+					</div>
+
+					<!-- COMENTÁRIOS -->
+					<% @comentarios.each do |comentario| %>
+						<% flag = 0 %>
+						<% if comentario.publicacao == @publicacao then %>
+							<div class="media mb-4">
+								<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+								<div class="media-body">
+									<%= comentario.conteudo %>
+								</div>
+							</div>
+							<% flag += 1 %>
+						<% end %>
+						<% if flag == 0 then %>
+							<p>Ainda não há comentários nessa publicação. Seja o(a) primeiro(a)!</p>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+	    </div>
+
+	    <!-- RODAPÉ -->
+	    <footer class="py-5 bg-dark">
+			<div class="container">
+				<p class="m-0 text-center text-white">Projeto Maria da Penha Chapecó | Desenolvido por Igor Felipe Boniatti &copy; Todos os direitos reservados. 2018.</p>
+			</div>
+	    </footer>
+
+	    <!-- Bootstrap core JavaScript -->
+	    <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
+	    <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>
+
+  	</body>
+</html>

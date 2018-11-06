@@ -1,160 +1,89 @@
 <!DOCTYPE html>
-<html class="wide wow-animation scrollTo smoothscroll" lang="en">
+<html lang="pt-br">
 
-<head>
-  <title>Projeto Maria da Penha</title>
-  <meta charset="utf-8">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
+  <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>@publicacao.titulo</title>
 
-  -->
-</head>
+    <!-- Bootstrap core CSS -->
+    <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
 
-<body>
-  <div class="page text-center">
-    <header class="section page-head slider-menu-position">
-      <div class="rd-navbar-wrap">
-        <nav class="rd-navbar rd-navbar-default rd-navbar-transparent" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-auto-height="true" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-stick-up="true">
-          <div class="rd-navbar-inner">
-            <div class="rd-navbar-panel">
-              <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap">
-                <span></span>
-              </button>
-              <div class="rd-navbar-brand">
-                <a href="">
-                  <div class="img-logo-fluid">
-              <%= link_to(image_tag ("logo_fundo_preto.png")) %>
-            </div>
-                </a>
-              </div>
-            </div>
-            <div class="rd-navbar-menu-wrap">
-              <div class="rd-navbar-nav-wrap">
-                <div class="rd-navbar-mobile-scroll">
-                  <div class="rd-navbar-mobile-brand">
-                    <a href="">
-                      <div class="logo">
-                <%= link_to(image_tag ("logo_fundo_preto.png")) %>
-              </div>
-                    </a>
-                  </div>
-                  <ul class="rd-navbar-nav">
-                    <li>
-                      <a href="home">
-                        <span>Página Inicial</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="a_lei_maria_da_penha">
-                        <span>A Lei Maria da Penha</span>
-                      </a>
-                    </li>
-                    <li class="active">
-                      <a href="publicacaos">
-                        <span>Publicações</span>
-                      </a>
-                      <ul class="rd-navbar-dropdown">
-                        <li>
-                          <a href="publicacaos#compromisso_e_atitude">
-                            <span class="text-middle">Compromisso e Atitude</span>
-                          </a>
-                          <a href="publicacaos#ministerio_publico">
-                            <span class="text-middle">Ministério Público</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="instituicaos">
-                        <span>Rede de Atendimento</span>                        
-                      </a>
-                    </li>
-                    <li>
-                      <a href="links_uteis">
-                        <span>Links Úteis</span>
-                      </a>
-                      <ul class="rd-navbar-dropdown">
-                        <li>
-                          <a href="links_uteis#vagas_de_emprego">
-                            <span class="text-middle">Vagas de emprego</span>
-                          </a>
-                          <a href="links_uteis#palestras">
-                            <span class="text-middle">Palestras</span>
-                          </a>
-                          <a href="links_uteis#entrevistas">
-                            <span class="text-middle">Entrevistas</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>                 
-                    <li>
-                      <a href="duvidas">
-                        <span>Tira-Dúvidas</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="sobre">
-                        <span>Sobre o Projeto</span>
-                      </a>
-                      <ul class="rd-navbar-dropdown">
-                        <li>
-                          <a href="sobre#game">
-                            <span class="text-middle">Game Maria da Penha nas Escolas</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>              
-              <div class="rd-navbar-btn-wrap">
-                <a class="btn btn-primary btn-anis-effect" style="color: #ffffff; background-color: #C4442D; border-color: #EE3252;" href="https://www.chapeco.sc.gov.br/">
-                  <span class="btn-text">Plano Municipal</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div class="swiper-container swiper-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="swiper-caption" style="margin-top: 100px">
-              <div class="swiper-slide-caption">
-                <% @publicacaos.each do |publicacao| %>
-                      <h2><td><%= publicacao.titulo %></td></h2>
-                      <h6><td><%= publicacao.data %></td></h6>
-                      <h4><%= publicacao.conteudo %></h4>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <footer class="section novi-background section-34 page-footer bg-black context-dark">
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag 'publicacaos/publicacaos', media: 'all', 'data-turbolinks-track' => true %>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <div class="footer-brand">
-          <a href="img-logo-fluid">
-            PROJETO MARIA DA PENHA CHAPECÓ
-          </a>
+        <a class="navbar-brand" href="home"><%= link_to(image_tag ("logo_fundo_preto.png")) %></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="a_lei_maria_da_penha">A Lei Maria da Penha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="publicacaos">Publicações</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="instituicaos">Redes de Atendimento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="baixavels">Links Úteis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="sobre">Sobre o Projeto</a>
+            </li>
+          </ul>
         </div>
-        <p class="small text-darker">©
-          <span class="copyright-year"></span> .
-          <a href="privacy.html">Privacy Policy</a>
-        </p>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+
+          <% @publicacaos.each do |publicacao| %>
+
+            <h1 class="mt-4"><a href="publicacaos/<%= publicacao.id %>"><%= publicacao.titulo %></a></h1>
+            <hr>
+            <h8>Autor: Projeto Maria da Penha | Data de publicação: <%= publicacao.data %></h8>
+            <hr>
+            <!-- <img class="img-fluid rounded" src="http://placehold.it/900x300" alt=""> -->
+
+            
+            
+            <!-- CONTEÚDO DA PUBLICAÇÃO -->
+            <p class="lead">
+              <%= publicacao.conteudo %>         
+            </p>
+
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Projeto Maria da Penha Chapecó | Desenolvido por Igor Felipe Boniatti &copy; Todos os direitos reservados. 2018.</p>
       </div>
     </footer>
-  </div>
-  <div class="snackbars" id="form-output-global"></div>
 
-  <%= javascript_include_tag 'core.min', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'script', media: 'all', 'data-turbolinks-track' => true %>
+    <!-- Bootstrap core JavaScript -->
+    <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>
 
-</body>
-
+  </body>
 </html>

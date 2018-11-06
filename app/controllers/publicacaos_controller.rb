@@ -10,6 +10,7 @@ class PublicacaosController < ApplicationController
   # GET /publicacaos/1
   # GET /publicacaos/1.json
   def show
+    @comentarios = Comentario.all
   end
 
   # GET /publicacaos/new

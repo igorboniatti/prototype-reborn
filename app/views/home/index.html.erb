@@ -1,175 +1,87 @@
 <!DOCTYPE html>
-<html class="wide wow-animation scrollTo smoothscroll" lang="en">
+<html lang="pt-BR">
 
-<head>
-  <title>Projeto Maria da Penha</title>
-  <meta charset="utf-8">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
+  <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Projeto Maria da Penha Chapecó</title>
 
-  -->
-</head>
+    <!-- Bootstrap core CSS -->
+    <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
 
-<body>
-  <div class="page text-center">
-    <header class="section page-head slider-menu-position">
-      <div class="rd-navbar-wrap">
-        <nav class="rd-navbar rd-navbar-default rd-navbar-transparent" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-auto-height="true" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-stick-up="true">
-          <div class="rd-navbar-inner">
-            <div class="rd-navbar-panel">
-              <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap">
-                <span></span>
-              </button>
-              <div class="rd-navbar-brand">
-                <a href="">
-                  <div class="img-logo-fluid">
-			      	<%= link_to(image_tag ("logo_fundo_preto.png")) %>
-			      </div>
-                </a>
-              </div>
-            </div>
-            <div class="rd-navbar-menu-wrap">
-              <div class="rd-navbar-nav-wrap">
-                <div class="rd-navbar-mobile-scroll">
-                  <div class="rd-navbar-mobile-brand">
-                    <a href="">
-                      <div class="logo">
-				      	<%= link_to(image_tag ("logo_fundo_preto.png")) %>
-				      </div>
-                    </a>
-                  </div>
-                  <ul class="rd-navbar-nav">
-                  	<li class="active">
-                      <a href="home">
-                        <span>Página Inicial</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="a_lei_maria_da_penha">
-                        <span>A Lei Maria da Penha</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="publicacaos">
-                        <span>Publicações</span>
-                      </a>
-                      <ul class="rd-navbar-dropdown">
-                        <li>
-                          <a href="publicacaos#compromisso_e_atitude">
-                            <span class="text-middle">Compromisso e Atitude</span>
-                          </a>
-                          <a href="publicacaos#ministerio_publico">
-                            <span class="text-middle">Ministério Público</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="instituicaos">
-                        <span>Rede de Atendimento</span>                        
-                      </a>
-                    </li>
-                    <li>
-                      <a href="links_uteis">
-                        <span>Links Úteis</span>
-                      </a>
-                      <ul class="rd-navbar-dropdown">
-                        <li>
-                          <a href="links_uteis#vagas_de_emprego">
-                            <span class="text-middle">Vagas de emprego</span>
-                          </a>
-                          <a href="links_uteis#palestras">
-                            <span class="text-middle">Palestras</span>
-                          </a>
-                          <a href="links_uteis#entrevistas">
-                            <span class="text-middle">Entrevistas</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>                 
-                    <li>
-                      <a href="duvidas">
-                        <span>Tira-Dúvidas</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="sobre">
-                        <span>Sobre o Projeto</span>
-                      </a>
-                      <ul class="rd-navbar-dropdown">
-                        <li>
-                          <a href="sobre#game">
-                            <span class="text-middle">Game Maria da Penha nas Escolas</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>              
-              <div class="rd-navbar-btn-wrap">
-                <a class="btn btn-primary btn-anis-effect" style="color: #ffffff; background-color: #C4442D; border-color: #EE3252;" href="https://www.chapeco.sc.gov.br/">
-                  <span class="btn-text">Plano Municipal</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag 'home/home', media: 'all', 'data-turbolinks-track' => true %>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="home"><%= link_to(image_tag ("logo_fundo_preto.png")) %></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="a_lei_maria_da_penha">A Lei Maria da Penha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="publicacaos">Publicações</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="instituicaos">Redes de Atendimento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="baixavels">Links Úteis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="sobre">Sobre o Projeto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="swiper-container swiper-slider" data-loop="true" data-autoplay="true" data-height="100vh" data-dragable="false" data-min-height="480px">
-        <div class="swiper-wrapper text-center">
-          <div class="swiper-slide" id="" data-slide-bg="" data-preview-bg="">
-            <div class="swiper-caption swiper-parallax">
-              <div class="swiper-slide-caption">
-                <div class="container">
-                  <div class="row justify-content-xl-center">
-                    <div class="col-xl-12">
-                      <h1>
-                        <span class="big text-uppercase" data-caption-animate="fadeIn" data-caption-delay="700">Projeto Maria da Penha Chapecó</span>
-                      </h1>
-                    </div>
-                    <div class="col-xl-10 offset-top-30">
-                      <h4 class="d-none d-md-block text-light" data-caption-animate="fadeIn" data-caption-delay="900"> Protótipo de website para auxiliar vítimas de violência doméstica e familiar no município de Chapecó (SC). </h4>
-                      <div class="group group-xl offset-top-20 offset-sm-top-50">
-                        <a class="btn btn-primary btn-lg btn-anis-effect" href="sobre" data-caption-animate="fadeIn" data-caption-delay="1200" style="color: #ffffff; background-color: #C4442D; border-color: #EE3252;">
-                          <span class="btn-text">Saiba mais</span>
-                        </a>
-                        <a class="btn btn-default btn-lg btn-anis-effect" href="publicacaos" data-caption-animate="fadeIn" data-caption-delay="1200">
-                          <span class="btn-text">Publicações</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Projeto Maria da Penha Chapecó</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Protótipo de website para auxiliar vítimas de violência doméstica e familiar no município de Chapecó/SC</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="sobre">Saiba mais sobre essa iniciativa</a>
           </div>
         </div>
       </div>
     </header>
-    <footer class="section novi-background section-34 page-footer bg-black context-dark">
+
+    <footer class="py-5 bg-dark">
       <div class="container">
-        <div class="footer-brand">
-          <a href="img-logo-fluid">
-            PROJETO MARIA DA PENHA CHAPECÓ
-          </a>
-        </div>
-        <p class="small text-darker">©
-          <span class="copyright-year"></span> .
-          <a href="privacy.html">Privacy Policy</a>
-        </p>
+        <p class="m-0 text-center text-white">Projeto Maria da Penha Chapecó | Desenolvido por Igor Felipe Boniatti &copy; Todos os direitos reservados. 2018.</p>
       </div>
+      <!-- /.container -->
     </footer>
-  </div>
-  <div class="snackbars" id="form-output-global"></div>
 
-  <%= javascript_include_tag 'core.min', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'script', media: 'all', 'data-turbolinks-track' => true %>
+    <!-- Bootstrap core JavaScript -->
+    <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>
 
-</body>
+    <!-- Plugin JavaScript -->
+
+    <!-- Custom scripts for this template -->
+    <%= javascript_include_tag 'home/home.min', media: 'all', 'data-turbolinks-track' => true %>
+
+  </body>
 
 </html>

@@ -13,7 +13,20 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
-Rails.application.config.assets.precompile += %w( style.css )
 
-Rails.application.config.assets.precompile += %w( core.min.js )
-Rails.application.config.assets.precompile += %w( script.js )
+Rails.application.config.assets.precompile += %w( home/home.css )
+# Rails.application.config.assets.precompile += %w( home/home.min.css )
+#Rails.application.config.assets.precompile += %w( home/home.js )
+Rails.application.config.assets.precompile += %w( home/home.min.js )
+
+Rails.application.config.assets.precompile += %w( publicacaos/publicacaos.css )
+
+
+# Rails.application.config.assets.precompile += %w( bootstrap/bootstrap.css )
+Rails.application.config.assets.precompile += %w( bootstrap/bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( bootstrap/bootstrap.bundle.min.js )
+# Rails.application.config.assets.precompile += %w( bootstrap/bootstrap.js )
+# Rails.application.config.assets.precompile += %w( bootstrap/bootstrap.min.js )
+
+
+Rails.application.config.assets.precompile += %w( jquery/jquery.min.js )
